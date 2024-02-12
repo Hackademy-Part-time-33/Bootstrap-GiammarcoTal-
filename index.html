@@ -6,23 +6,273 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
 </head>
-<body class="vh-100 vw-100 overflow-hidden">
-    <div class="container fluid p-3">
-        <div class="row p-0">
-            <div class="col-10 nav-item h5 d-flex">
-                <a class="nav-link active mx-3" aria-current="Home" href="#">Home</a>
-                <a class="nav-link active mx-3" aria-current="Info" href="#">Info</a>
-                <a class="nav-link active mx-3" aria-current="Reservation" href="#">Reservation</a>
-                <a class="nav-link active mx-3" aria-current="location" href="#">location</a>
+
+<body class="vw-100">
+    
+    <!-- barra di navigazione responsive -->
+    
+    <navbar>
+        <div class="container-fluid">
+            <div class="row p-0">
+                <div class="col-12 p-0">
+                    <nav class="navbar navbar-expand-lg navbar-warning bg-warning">
+                        <a class="navbar-brand logo"><img src="/logo.png    " alt="" width="70px"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse text-center" id="navbarNav">
+                            <div class="col-lg-10 nav-item h5 d-flex">
+                                <a class="nav-link active mx-3" aria-current="Home" href="#">Home</a>
+                                <a class="nav-link active mx-3" aria-current="Info" href="#">Info</a>
+                                <a class="nav-link active mx-3" aria-current="Reservation" href="#">Ricette</a>
+                                <a class="nav-link active mx-3" aria-current="location" href="#">Dove siamo</a>
+                            </div>
+                            <div class="col-lg-2 h5">
+                                <a class="nav-link active text-dark pt-2" aria-current="Book Table" href="#">book table</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
-            <div class="col-2 h5">
-                <a class="nav-link active text-dark" aria-current="Book Table" href="#">Book table</a>
+        </div>
+    </navbar>
+    
+    <!-- prima scheda con pulsante modal di prenotazione -->
+    
+    <header>
+        <div class="header d-flex align-items-center justify-content-center">
+            <div class="text-center">
+                <H2 class="text-white">
+                    vieni a mangiare da
+                </H2>
+                
+                <h1 class="text-white display-1">
+                    LA CUCINA DELLA NONNA
+                </h1>
+                
+                <!-- form per prenotare un tavolo -->
+                
+                <button type="button" class="btn btn-primary btn-warning btn-lg" data-bs-toggle="modal" data-bs-target="#reservationModal">PRENOTA ORA</button>
+                <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content bg-warning">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="reservationModalLabel">Prenotazione</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Form nel corpo del modal -->
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="firstName" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="date" class="form-label">Data</label>
+                                        <input type="date" class="form-control" id="date" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="time" class="form-label">Ora</label>
+                                        <input type="time" class="form-control" id="time" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="seats" class="form-label">Posti a Sedere</label>
+                                        <input type="number" class="form-control" id="seats" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Prenota</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- seconda scheda con link a ricette -->
+    
+    <div class="container-fluid vh-100">
+        <div class="part2 row h-100 align-items-center justify-content-center">
+            
+            <img src="/nonnacucina.png" alt="" class="img-fluid col-6 col-md-3 rounded img2">
+            <img src="/sugononna.png" alt="" class="img-fluid col-6 col-md-3 img2">
+            
+            
+            <div class="col-12 col-md-4">
+                <h2>
+                    Lorem ipsum dolor sit amet consectetur
+                </h2>
+                <p class=>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero enim, aut deserunt iste optio minus odio quo explicabo corrupti commodi assumenda tempora voluptates facere veritatis consequuntur omnis dolore vel ad! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, rem reru
+                </p>
+                <div class="text-end">
+                    <button type="button" class="btn btn-warning btn-lg">Le ricette della nonna</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- terza scheda con cards -->
+    
+    <div class="part3 container-fluid h-auto py-5">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="https://picsum.photos/200/300" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="https://picsum.photos/200/301" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card mx-auto" style="width: 18rem;">
+                    <img src="https://picsum.photos/200/302" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     
+    <!-- quarta scheda con carosello -->
     
+    <div class="container-fluid bg-warning">
+        <div id="carouselreview" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner text-center bg-warning">
+                <div class="mt-4">
+                    <h2>i nostri clienti</h2>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row h-100 d-flex align-items-center">
+                        <div class="col-12 col-md-4 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                            </svg>
+                            <h3>titolo recensione</h3>
+                            <p class="m-auto text-black">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dolorum dolor nostrum, cumque similique nam obcaecati deleniti et maxime repellendus ut quasi illum. Numquam officiis et <br> <br> <em>- Mario Rossi </em> </p>
+                        </div>
+                        
+                        <div class=" col-12 col-md-4 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                            </svg>
+                            <h3>titolo recensione</h3>
+                            <p class="m-auto text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consectetur corporis aut ab ea, sed praesentium, recusandae cumque impedit dolore consequatur et omnis a fuga expedita, sequi at sapiente consequuntur!"" <br> <br> <em>- Giada Bianchi</em> </p>
+                        </div>
+                        
+                        <div class=" col-12 col-md-4 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                            </svg>
+                            <h3>titolo recensione</h3>
+                            <p class="m-auto text-black">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, vel voluptatibus consequuntur commodi nam veritatis, debitis impedit aliquid nulla fugiat animi aut omnis  <br> <br> <em>- Luigi Verdi</em> </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row h-100 d-flex align-items-center">
+                        <div class="col-12 col-md-4 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                            </svg>
+                            <h3>titolo recensione</h3>
+                            <p class="m-auto text-black">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dolorum dolor nostrum, cumque simili" <br> <br> <em>- Mario Rossi</em> </p>
+                        </div>
+                        
+                        <div class=" col-12 col-md-4 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                            </svg>
+                            <h3>titolo recensione</h3>
+                            <p class="m-auto text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consectetur corporis aut ab ea, sed praesentium, recusandae cumque impedit dolore consequatur et omnis a fuga expedita, sequi at sapiente consequuntur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, tenetur? Accusantium quidem quaerat" <br> <br> <em>- Giada Bianchi</em> </p>
+                        </div>
+                        
+                        <div class=" col-12 col-md-4 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-quote" viewBox="0 0 16 16">
+                                <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"/>
+                            </svg>
+                            <h3>titolo recensione</h3>
+                            <p class="m-auto text-black">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, vel voluptatibus consequuntur commodi  <br> <br> <em>- Luigi Verdi</em> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselreview" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselreview" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- quinta scheda con contatti -->
+    
+    <div class="row align-items-center ">
+        <div class=" tableimg col-12 col-md-6 g ">
+            <img src="/tablerestaurant.jpg" class="img-fluid" alt="Immagine">
+        </div>
+
+        <div class="col-md-1">
+            
+
+        </div>
+        
+        <div class=" col-12 col-md-5 gx-5">
+            <h2>
+                VENITE A TROVARCI!
+            </h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h3>
+                telefono
+            </h3>
+
+            <p>
+                1234 567890
+            </p>
+            <h3>
+                e-mail
+            </h3>
+
+            <p>
+                lacucinadellanonna123@mail.com
+            </p>
+            <h3>
+                indirizzo
+            </h3>
+
+            <p>
+                via dei matti 33 - Svervegia 4321 (SV)
+            </p>
+
+        </div>
+    </div>
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
